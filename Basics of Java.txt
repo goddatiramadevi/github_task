@@ -1,0 +1,667 @@
+Basics of Java
+Data Types and Variables in Java
+Having a good understanding of Data types and variables is the basic step towards understanding programming. This chapter is critical and please go through the details and practice the exercises given below related to Data types and Variables in Java.
+What is Data Type?
+A data type indicates what sort of value or the type of data the variable can represents, such as integer, floating-point numbers, character, boolean or an alphanumeric string.
+There are other data types as well like short, long and float but in Selenium programming you may not face any situation where you have to use these data types. These data types are used when each byte of memory is important for better performance of the system.
+ What is Variable?
+As it names suggest, variable is a value that can change. A simple computer program uses a set of instructions and data. Data can be constants or fixed values that never change and it can be variable that can change during the execution. Rather than entering data directly into a program, a programmer can use variables to represent the data. When compiler run the program, variables used in the instructions are replaced with the real data entered by the programmer.
+In technical term, variable is a reserved space or a memory location to store some sort of information. Information can be of any data type such as int, string, bool or float. Each variable in the program has its space allocated in the memory and based on the data type, system allocates only required memory to the variables.
+Every variable in the program has it’s name and data type.
+How Variables work?
+Declaring Variables: Ask compiler to allocate some amount of memory to the variable for storing some value. As compiler would like to know the data type of the variable, so that it can allocate only required memory to the variable. That can be done by ‘declaring the data type’ of the variable.
+Naming Variables: After variable declaration, when the program needs the stored value, compiler will go to the memory location to fetch the value and pass it back to the program. To effectively handle this transaction, the compiler would need two pieces of information from the program: name and data type of the variable. Give the name of your choice to the variable and let the compiler know about it. So that next time when you refer that name, compiler would know what piece of memory you are refereeing to. That name of the variable is called the Identifier.
+This process is called as Variable Declaration.
+DataTypeOfVariable     VariableName;
+Initialization of Variables: Once variable declaration is done, then a value can be stored in the reserved memory location. Before that you would not be able to use the variable. Initialization of a variable is very important before using the variable for any sort of operations. Putting an initial value is referred to as Initializing the Variable.
+VariableName = Value;
+Examples of different data types
+Data Type – boolean
+Boolean data type is use to store only ‘boolean‘ values such as ‘true‘ and ‘false‘. To declare a Boolean variable, you can use the ‘boolean‘ keyword.
+Here is an example:
+Above test will produce this:
+Test Result is: true
+Test Result is: false
+
+package JavaTutorials;
+ 
+public class BooleanTestExercise {
+ 
+public static void main(String[] args) {
+//Use the boolean keyword to declare boolean variable
+        boolean testResult;
+ 
+//Initialize the boolean variable with value true or false, once boolean declaration is done
+testResult = true;
+ 
+//Print the value of boolean variable
+System.out.println("Test Result is: " +  testResult);
+ 
+//Change the value of boolean variable
+testResult = false;
+ 
+//Print the value of boolean variable
+System.out.println("Test Result is: " +  testResult);
+    }
+}
+Data Type – int
+Integer data type is use to store numeric/numbers in the variable. In technical term, an integer store 32- bit of information and it stores the value between -2,147,483,648 and 2,147,484,647. But a decimal number can not be store in the ‘int‘ data type.
+Here is an example: 
+package JavaTutorials;
+ 
+public class IntegerTestExersice {
+ 
+public static void main(String[] args) {
+//Use the int keyword to declare integer variable
+        int carSpeed;
+ 
+//Initialize the integer variable with value 20
+        carSpeed = 20;
+ 
+//Print the value of integer variable
+System.out.println("Car is running at the speed of: " +  carSpeed);
+ 
+//Change the value of integer variable
+carSpeed = carSpeed + 20;
+ 
+//Print the value of integer variable
+System.out.println("Current speed of the car is: " +  carSpeed);
+ 
+}
+}
+Above test will produce this:
+Car is running at the speed of: 20
+Current speed of the car is: 40
+ Data Type – char
+Character data type is use to store just one character in the variable. It is very rarely used in Selenium. To initialize such a variable, assign a character with in the single-quoted. 
+Here is an example: 
+package JavaTutorials;
+ 
+public class CharTestExercise {
+ 
+public static void main(String[] args) {
+//Use the char keyword to declare character variable
+        char a;
+ 
+        //Initialize the char variable with value 'P'
+        a = 'P';
+ 
+        //Print the value of char variable
+       System.out.println("Value of char is : " +  a);
+ 
+}
+ 
+}
+Above test will produce this:
+Value of char is : P
+ Data Type – double
+To declare a variable used to hold such a decimal number, you can use the double keyword.
+Here is an example: 
+package JavaTutorials;
+ 
+public class DoubleTestExercise {
+ 
+public static void main(String[] args) {
+//Use the double keyword to declare decimal variable
+double PI;
+ 
+//Initialize the double variable with value 'P'
+        PI = 3.14159;
+ 
+      //Print the value of double variable
+        System.out.print("PI: " + PI);
+ 
+}
+ 
+}
+Above test will produce this:
+PI: 3.14159
+ Notes: Rules for naming a variable
+A variable name can be of single letter of alphabets (A-Z).
+Variable name can start only with letter, under score ‘_’ and the dollar sign ‘$’.
+Variable name can not start with digit.
+Variable name can include digits.
+The name of a variable cannot be one of the words that the Java languages has reserved for its own use such as static, this, void, final, for etc.
+Every body follow their own pattern to declare variables and I follow my own. I usually declare all the string variables with small letter ‘s’ and int variable with small letter ‘i’. So that in my program when I see any variable starts with letter ‘s‘, I can understand that it is a String variable. For example:
+String sName = “ToolsQA”;
+int iNum = 10;
+bollean bResult = true;
+Example of declaring multiple variables:
+int a, b, c;         // Declares multiple int, a, b, and c.
+int a = 10, b = 20, c= 30;  // Example of multiple initialization
+
+Exercise – 1
+Write a Java program to print “Hello World” on the screen.
+Exercise – 2
+Write a Java program to print the following output:
+++++++
+@@@@@@
+**
+######
+Exercise – 3
+Write a Java program to declare three variable  a, b, & c and store the values respectively 10, 20.3 & 3.14785 . Then display their values on the screen.
+Exercise – 4
+Write a Java program to declare a Boolean variable with initial value of “true” and later change it to “false” before printing it.
+Operators
+Operators are special characters within the Java language to manipulate primitive data types. Java operators can be classified as :
+Unary : Takes one argument. These operators appear before (prefix) its argument or after (postfix) its argument.
+Binary : Takes two arguments.  These operators appear between its arguments.
+Ternary : Takes three arguments. These operators appear between its arguments.
+Different types of Operators in java
+Assignment Operators : =
+Arithmetic Operators : - + * / % ++ --
+Relational Operators : > < >= <= == !=
+Logical Operators : && || & | ! ^
+Conditional Operator : ?
+Bit wise Operator : & | ^ >> >>>
+Compound Assignment Operators :  += -= *= /= %=
+Assignment Operator
+Assignment Operator is denoted by the symbol “=” and it is the most commonly used operator. it simply assigns the value on the right to the variable on the left. Syntax of the assignment operator is <variable> = <expression>.
+Examples
+public class Assignment_Operators {
+//Normal Assignment
+static int speed = 80; // speed variable gets the value 80
+static int distance = 20; // distance variable gets the value 20
+static int time = 10; // time variable gets the value 10
+String s = new String();
+s = “veda”;
+static String name = "ToolsQA"; // name variable gets the value ToolsQA
+static boolean isGood = true; // isGood variable gets the value true
+public static void main(String[] args) {
+System.out.println("Value stored in the speed variable is : " + speed);
+System.out.println("Value stored in the distance variable is : " + distance);
+System.out.println("Value stored in the time variable is : " + time);
+System.out.println("Value stored in the name variable is : " + name);
+System.out.println("Value stored in the isGood variable is : " + isGood);
+speed = 100; // Previous value of speed is overwritten with 100
+time = distance; // Previous value of time is overwritten with distance value
+name = "ForumsQA"; // Previous value of name is overwritten with ForumsQA
+isGood = false; // Previous value of isGood is overwritten with false
+System.out.println("Value stored in the speed variable is : " + speed);
+System.out.println("Value stored in the time variable is : " + time);
+System.out.println("Value stored in the name variable is : " + name);
+System.out.println("Value stored in the isGood variable is : " + isGood);
+//Multiple Assignments
+speed = distance = 0; // 100 (20 = 0) 
+System.out.println("Value stored in the speed variable is : " + speed);
+ 
+//Illegal Assignments - Compile time errors
+speed = "ToolsQA"; //String can not be assign to integer
+name = 10; // Integer can not be assign to String
+isGood = "ToolsQa" // String can not be assign to Boolean
+}
+}
+OutPut
+Value stored in the speed variable is : 80
+Value stored in the distance variable is : 20
+Value stored in the time variable is : 10
+Value stored in the name variable is : ToolsQA
+Value stored in the isGood variable is : true
+Value stored in the speed variable is : 100
+Value stored in the time variable is : 20
+Value stored in the name variable is : ForumsQA
+Value stored in the isGood variable is : false
+Value stored in the speed variable is : 0
+Arithmetic Operators
+Arithmetic operators perform the same basic operations you would expect if you used them in mathematics. They take two operands and return the result of the mathematical calculation. There are seven important arithmetic operators available in Java:
+Addition ‘+’ : This add two numbers or concatenate two strings
+Subtraction ‘-‘ : This subtracts right side operand from the left side operand
+Multiplication ‘*’ : This multiplies two numbers
+Division ‘/’ : This divides left side operand by the right side operand
+Modulo ‘%’ : This divides left side operand by the right side operand and returns remainder
+Increment ‘++’ : This increases the value by 1
+Decrement ‘- -‘ : This decreases the value by 1
+Examples
+package javaTutorials;
+public class Arithmetic_Operators {
+public static void main(String[] args) {
+int a, b = 10, c = 5;
+a = b + c;
+System.out.println("Value of 'a' after '+' Arithmetic operation is " + a);
+a = b - c;
+System.out.println("Value of 'a' after '-' Arithmetic operation is " + a);
+a = b * c;
+System.out.println("Value of 'a' after '*' Arithmetic operation is " + a);
+a = b / c;
+System.out.println("Value of 'a' after '/' Arithmetic operation is " + a);
+a = b % c;
+System.out.println("Value of 'a' after '%' Arithmetic operation is " + a);
+b++;
+System.out.println("Value of 'b' after '++' Arithmetic operation is " + b);
+c--;
+System.out.println("Value of 'c' after '--' Arithmetic operation is " + c);
+} 
+}
+Output
+Value of ‘a’ after ‘+’ Arithmetic operation is 15
+Value of ‘a’ after ‘-‘ Arithmetic operation is 5
+Value of ‘a’ after ‘*’ Arithmetic operation is 50
+Value of ‘a’ after ‘/’ Arithmetic operation is 2
+Value of ‘a’ after ‘%’ Arithmetic operation is 0
+Value of ‘b’ after ‘++’ Arithmetic operation is 11
+Value of ‘c’ after ‘–‘ Arithmetic operation is 4
+Relational Operators
+Relational Operators are used to determine the comparison between two or more objects. These operators always return the boolean value either true or false when used in an expression. In java we have six different relational operators:
+Greater than ‘>’ : This checks if the value of left operand is greater than value of right operand
+Less than ‘<‘ : This checks if the value of left operand is less than the value of right operand
+Greater than or Equal to ‘>=’ : This checks if the value of left operand is greater than or equal to the value of right operand
+Less than or Equal to ‘<=’ : This checks if the value of left operand is less than or equal to the value of right operand
+Equal ‘==’ : This checks if the value of both operands are equal
+Not Equal ‘!=’ : This checks if the value of two operands are not equal
+Example
+package javaTutorials;
+public class Relational_Operators {
+public static void main(String[] args) {
+int Ten = 10; 
+int Twenty = 20;
+int Thirty = 30;
+ 
+System.out.println("<<<<<< GREATER THAN OPERATOR >>>>>>");
+System.out.println(" Ten > Twenty ==> " + (Ten > Twenty)); //false
+System.out.println(" Twenty > Ten ==> " + (Twenty > Ten)); //true
+System.out.println(" Thirty > Twenty ==> " + (Thirty > Twenty)); //true
+
+System.out.println("<<<<<< GREATER THAN OR EQUAL TO OPERATOR >>>>>>");
+System.out.println(" Ten >= Twenty ==> " + (Ten >= Twenty)); //false
+System.out.println(" Twenty >= Ten ==> " + (Twenty >= Ten)); //true
+System.out.println(" Thirty >= Twenty ==> " + (Thirty >= Twenty)); //true
+ 
+System.out.println("<<<<<< LESS THAN OPERATOR >>>>>>");
+System.out.println(" Ten < Twenty ==> " + (Ten < Twenty)); //true
+System.out.println(" Twenty < Ten ==> " + (Twenty < Ten)); //false
+System.out.println(" Thirty < Twenty ==> " + (Thirty < Twenty)); //false
+ 
+//less than or equal to
+System.out.println("<<<<<< LESS THAN OR EQUAL TO OPERATOR >>>>>>");
+System.out.println(" Ten <= Twenty ==> " + (Ten <= Twenty)); //true
+System.out.println(" Twenty <= Ten ==> " + (Twenty <= Ten)); //false
+System.out.println(" Thirty <= Twenty ==> " + (Thirty <= Twenty)); //false
+//equal to
+System.out.println("<<<<<< EQUAL TO OPERATOR >>>>>>");
+System.out.println(" Ten == Twenty ==> " + (Ten == Twenty)); //false
+System.out.println(" Thirty == Twenty + Ten ==> " + (Thirty == Twenty+Ten)); //true
+//not equal to
+System.out.println("<<<<<< NOT EQUAL TO OPERATOR >>>>>>");
+System.out.println(" Ten != Twenty ==> " + (Ten != Twenty)); //true
+System.out.println(" Thirty != Twenty + Ten ==> " + (Thirty != Twenty + Ten)); //false
+}
+}
+Output:
+<<<<<< GREATER THAN OPERATOR >>>>>>
+Ten > Twenty ==> false
+Twenty > Ten ==> true
+Thirty > Twenty ==> true
+<<<<<< GREATER THAN OR EQUAL TO OPERATOR >>>>>>
+Ten >= Twenty ==> false
+Twenty >= Ten ==> true
+Thirty >= Twenty ==> true
+<<<<<< LESS THAN OPERATOR >>>>>>
+Ten < Twenty ==> true
+Twenty < Ten ==> false
+Thirty < Twenty ==> false
+<<<<<< LESS THAN OR EQUAL TO OPERATOR >>>>>>
+Ten <= Twenty ==> true
+Twenty <= Ten ==> false
+Thirty <= Twenty ==> false
+<<<<<< EQUAL TO OPERATOR >>>>>>
+Ten == Twenty ==> false
+Thirty == Twenty + Ten ==> true
+<<<<<< NOT EQUAL TO OPERATOR >>>>>>
+Ten != Twenty ==> true
+Thirty != Twenty + Ten ==> false
+Logical Operators
+Logical operators return a true or false value based on the state of the Variables. Each argument to a logical operator must be a boolean data type, and the result is always a boolean data type. Below are the three most commonly used logical operators:
+And Operator ‘&&’ : This returns true if the output of both the operands are true
+OR Operator ‘||’ : This returns true if the output of either operands are true
+NOT Operator ‘!’ : This invert the state of the condition
+Example
+package javaTutorials;
+public class Logical_Operators {
+public static void main(String[] args) {
+boolean Output_1 = true;
+boolean Output_2 = false;
+System.out.println("Check if both the boolean variables are true : " + (Output_1 && Output_2));
+System.out.println("Check if even one of the boolean varibale is true : " + (Output_1 || Output_2));
+System.out.println("Change the state of the Output_1 to false : " + (!Output_1));
+System.out.println("Change the state of the Output_1 to false : " + (Output_1));
+} 
+}
+Output
+Check if both the boolean variables are true : false
+Check if even one of the boolean varibale is true : true
+Change the state of the Output_1 to false : false
+Conditional Operator
+The conditional operator is the only operator that takes three arguments in Java. The conditional operator is equivalent to if-else statement. It is also known as the ternary operator. This operator consists of three operands and is used to evaluate Boolean expressions. The goal of the operator is to decide which value should be assigned to the variable. The operator is written as:
+variable = (expression) ? value if true : value if false
+Example
+package javaTutorials;
+public class Conditional_Operators {
+public static void main(String[] args) {
+int Ten = 10; 
+int Twenty = 20;
+int Thirty = 30;
+boolean bValue;
+int iValue;
+int bValue = (Thirty == Twenty + Ten) ? true: false;
+System.out.println(bValue = (Thirty >= Twenty + Ten) ? true: false);
+bValue = (Thirty > Twenty + Ten) ? true: false;
+bValue = (Thirty <= Twenty + Ten) ? true: false;
+bValue = (Thirty < Twenty + Ten) ? true: false;
+
+System.out.println( "The boolean value of the variable 'bValue' is : " +  bValue ); //true
+iValue = ((Thirty == Twenty + Ten)) ? 50: 100;
+System.out.println( "The int Value of the variable iValue is : " + iValue ); //50
+//This is a use of Not Logical Operator
+iValue = (!(Thirty == Twenty + Ten)) ? 50: 100;
+System.out.println( "The int Value of the variable iValue is : " + iValue ); //100
+} 
+}
+Output
+The boolean value of the variable ‘bValue’ is : true
+The int Value of the variable iValue is : 50
+The int Value of the variable iValue is : 100
+
+Decision Making
+Decision making in java
+Decision making is one of the critical facilities which a programming language has to provide. To understand Java better we have to understand this chapter and practice by writing some decision making code
+There are two types of decision making statements in Java. One is very commonly used which is If statement and you will find it almost in every piece of code. Second is Switch statement.
+The if Statement
+The if-then statement is a control flow statement. Which actually specifies that the block of code is only executed when the test specified by the if part evaluated to be true. The if statement executed from top to down. As soon as one of the conditions is true, statement associated with that if statement executed. Keyword then is not used in Java and it is denoted as {}. The syntax for if-then statement is:
+if(boolean-expression){  
+statement; //This part of code will only execute when the condition returns true 
+}
+Example
+package javaTutorials;
+public class IfThen_Statement {
+public static void main(String[] args) {
+String sDay = "Sunday";
+int iDay = 7;
+if(sDay.equals("Sunday")){
+System.out.println("Today is Sunday");
+}
+if(iDay==7){
+System.out.println("Today is Sunday");
+}
+}
+}
+Output
+Today is Sunday
+The if then else Statement
+If statement can be executed in different ways, such as if-then-else & if-else_if-else. The optional else block is executed when the if part evaluates to false. The syntax for if-then-else statement is:
+if (boolean-expression) {
+        // Execute if boolean-expression is true
+    } else {
+        // Execute if boolean-expression is false
+    }
+Example
+package javaTutorials;
+public class IfThenElse_Statement {
+public static void main(String[] args) {
+String sDay = "Saturday";
+int iDay = 6;
+if(sDay.equals("Sunday")){
+System.out.println("Today is Sunday");
+}else{
+System.out.println("Today is not Sunday");
+}
+if(iDay==7){
+System.out.println("Today is Sunday");
+}else{
+System.out.println("Today is not Sunday");
+}
+}
+}
+Output
+Today is not Sunday
+
+The if then else if Statement
+Like this we can handle multiple conditions as well with the help of if-else_if-else statements. The syntax is:
+if (boolean-expression) {
+        // Execute if boolean-expression one is true
+    } else if (boolean-expression2) {
+        // Execute if boolean-expression two is true
+    } else {
+        // Execute if boolean-expression is false
+    }
+Example
+package javaTutorials;
+public class IfThenElseIf_Statement {
+public static void main(String[] args) {
+String sDay = "Monday";
+int iDay = 1;
+if(sDay.equals("Sunday")){
+System.out.println("Today is Sunday");
+}else if(sDay.equals("Saturday")){
+System.out.println("Today is not Saturday");
+}else{
+System.out.println("Today is a Weekday");
+}
+if(iDay==7){
+System.out.println("Today is Sunday");
+}else if(iDay==6){
+System.out.println("Today is Saturday");
+}else{
+System.out.println("Today is a Weekday");
+}
+}
+}
+Output
+Today is a Weekday
+Note: The else if part is optional but it can appear many times between the if and else parts. The else part is optional but it can appears only once after if and all else if parts. If none of the condition is true then else statement will be executed, only one of the statement executed from list of else if statements.
+The switch Statement
+Switch statement provide an easy way to dispatch execution to different parts of your code based on the value of an expression. It is use to replace multilevel if-else-if statement. But the switch statement can only be used if the conditions are based on the same constant value. The syntax for switch statement is :
+switch(expression){  
+        case value1:
+//Execute if the variable is matched with the case (value1) 
+        break;  
+        case value2:
+//Execute if the variable is matched with the case (value2)
+        break;   
+        default:
+//Execute if the variable is not matched with the any case
+break;  
+}
+There are few rules which apply to switch statement:
+1) The “expression” must be of type byte, short, int, or char. 
+2) A switch statement can have an optional default case, which must appear at the end of the switch. The default case can be used for performing a task when none of the cases is true. No break is needed in the default case.
+3) Each case must be end with colon (:)
+4) Each case value must be a unique literal(constant not a variable). Duplicate case value not allowed.
+5) Typically each case has a trailing break and a break acts as an exit point.
+Example
+package javaTutorials;
+public class Switch_Statement {
+public static void main(String[] args) {
+int iDay = 1;
+String sDay = "Monday";
+switch(iDay){
+case 1:
+System.out.println("Today is Monday");
+break;
+case 3:
+System.out.println("Today is Tuesday");
+break;
+case 4:
+System.out.println("Today is Wednesday");
+break;
+case 5:
+System.out.println("Today is Thursday");
+break;
+case 6:
+System.out.println("Today is Friday");
+break;
+case 7:
+System.out.println("Today is Saturday");
+break;
+default:
+System.out.println("Today is Sunday");
+break;
+}
+switch(sDay){
+case "Monday":
+System.out.println("Today is Monday");
+break;
+case "Tuesday":
+System.out.println("Today is Tuesday");
+break;
+case "Wednesday":
+System.out.println("Today is Wednesday");
+break;
+case "Thursday":
+System.out.println("Today is Thursday");
+break;
+case "Friday":
+System.out.println("Today is Friday");
+break;
+case "Saturday":
+System.out.println("Today is Saturday");
+break;
+default:
+System.out.println("Today is Sunday");
+break;
+}
+}
+}
+Output
+Today is Monday
+
+
+Solution for below exercise: 
+https://beginnersbook.com/2017/08/if-else-statement-in-java/
+Java Program to find the largest of three numbers using if..else..if
+Java Program to check if number is positive or negative
+Java Program to check if number is even or odd
+
+Arrays
+So far in previous chapters we used the variables that hold only one value. An integer variable is capable of storing only one number, like wise a String variable is capable of storing only one string. An array is a type of variable that can store multiple values. It is like a list of items but it always contains similar data type values.
+Points to notice about arrays in Java:
+Array is a data structure in java that can hold one or more values in a single variable.
+Array in java is a collection of similar type of values.
+Java has two types of arrays – single dimensional and multidimensional arrays.
+Array index starts at 0.
+ 
+Just to help you to visualize the structure of array, think of an excel sheet column. The data held in a single-list array look like this:
+
+Each cell in excel sheet is like a compartment in an array. Each compartment has its position number. In the image above of Integer Array, position 0 is holding a value of 10, array position 1 is holding a value of 20, position 2 has a value of 30, and so on. The structure is same for String Array as well, Ten is stored at the position zero, twenty is stored at one and so on.
+Where to use Arrays
+Let’s say in your Java program you are required to store ten different makes of the car. A normal way of doing this is to create ten different string variables and store car makes in each one of these variables. It will look like this in normal way of using variable:
+package javaTutorials;
+public class Array {
+String sMake1, sMake2, sMake3, sMake4, sMake5, sMake6, sMake7, sMake8, sMake9,sMake10;
+}
+Array provides a smart way of doing the trick by storing all the values within just one variable. Syntax of creating array is :
+ArrayDataType[] ArrayName;
+package javaTutorials;
+public class Array {
+String[] sMake;
+}
+Assigning values to an Array
+You can create an array by using the new operator. Declaring an array variable, creating an array, and assigning the reference of the array to the variable can be combined in one statement. Syntax for creating an array is:
+ArrayType [] ArrayName = New ArrayType [Size of an Array];
+ArrayType : This is the type of the array. An array can store different data types like integer, string, boolean etc. But the only condition with it is that all the values should be of same type in an array. If you try to assign string value to an integer array, you would get compile time error.
+ArrayName : Array name can be any name you like to choose. Try making it more logical & meaningful. I always follow a pattern in my code for naming variable. Like for string variables I name my variable starting with small ‘s‘, for integer variable I start it with small ‘i‘ and for array I start it with small ‘a‘.
+For example: String sExample; int iExample; String[] aExample; Note: This may not be the best practice as ‘i’ denotes for interfaces in Java.
+New : New is the Java keyword to create an object of a class. It locates a block of memory large enough to contain the array.
+[Size of an Array] : This decides how big is the array is. At the time of creation, the length of the array must be specified and remains constant. [5] denotes that the array have 5 compartments in it. The first index value in the array is zero, thus, the index with value four is used to access the fifth element in the array.
+Example Style 1
+String[] aCarMake = new String[5];
+      aCarMake[0] = "BMW";
+      aCarMake[1] = "AUDI";
+      aCarMake[2] = "TOYOTA";
+      aCarMake[3] = "SUZUKI";
+      aCarMake[4] = "HONDA";
+Arrays can also be created like this:
+Example Style 2
+String [] aCarMake = {"BMW","AUDI","TOYOTA","SUZUKI","HONDA"};
+Accessing Array values
+A program can access each of the array elements (the individual cells) by referring to the name of the array followed by the subscript denoting the element (cell). For example, the third element is denoted aCarMake[2]. Array also gives a property called length. Length returns the size of the array.
+Example
+package javaTutorials;
+ 
+public class Array {
+ 
+public static void main(String[] args) {
+String [] aMake = {"BMW","AUDI","TOYOTA","SUZUKI","HONDA"};
+ 
+//This is to store the size of the Array
+int iLength = aMake.length;
+System.out.println("Length of the Array is ==> " + iLength);
+ 
+//This is to access the first element of an array directly with it's position
+String sBMW = aMake[0];
+System.out.println("First value of the Array is ==> " + sBMW);
+ 
+//This is to access the last element of an Array
+String sHonda = aMake[iLength-1];
+System.out.println("Last value of the Array is ==> " + sHonda);
+ 
+//This is to print all the element values of an Array
+for(int i = 0;i<=iLength-1;i++){
+System.out.println("The value stored at position "+i+" in aMake array is ==> " + aMake[i]);
+}
+}
+ 
+}
+
+
+Output
+Length of the Array is ==> 5
+First value of the Array is ==> BMW
+Last value of the Array is ==> HONDA
+The value stored at position 0 in aMake array is ==> BMW
+The value stored at position 1 in aMake array is ==> AUDI
+The value stored at position 2 in aMake array is ==> TOYOTA
+The value stored at position 3 in aMake array is ==> SUZUKI
+The value stored at position 4 in aMake array is ==> HONDA
+Passing an Array to a Method:
+Array can be easily passed to a method as a parameters, just like we pass integers and strings to methods. In the below example aMake array is passed to Print_Array() method.
+Example
+package javaTutorials;
+ 
+public class Passing_Array {
+ 
+public static void main(String[] args) {
+//Declaring an Array
+String [] aMake = {"BMW","AUDI","TOYOTA","SUZUKI","HONDA"};
+// Calling Print Array method and passing an Array as a parameter
+Print_Array(aMake);
+ 
+}
+ 
+//This accept Array as an argument of type String 
+public static void Print_Array(String []array){
+ 
+for(int i = 0;i<=array.length-1;i++){
+System.out.println("Printing all the values of an Array ==> " + array[i]);
+}
+} 
+}
+Output
+Printing all the values of an Array ==> BMW
+Printing all the values of an Array ==> AUDI
+Printing all the values of an Array ==> TOYOTA
+Printing all the values of an Array ==> SUZUKI
+Printing all the values of an Array ==> HONDA
+Returning an Array from a Method
+A method may also return an array. The way we return any other data type from a method, array can also be returned in the same way. Just mention the type of array in the method declaration followed by [ ]. In the below example an array of type string is returned from a method ReturnArray().
+Example
+package javaTutorials;
+public class Returning_Array {
+public static void main(String[] args) {
+String[] aMake = ReturnArray();
+for(int i = 0;i<=aMake.length-1;i++){
+System.out.println("Printing all the values of an Array ==> " + aMake[i]);
+}
+}
+ 
+//This method returns an Array of type String
+public static String[] ReturnArray() {
+String [] aArray = {"BMW","AUDI","TOYOTA","SUZUKI","HONDA"};  
+  return aArray;
+}
+}
+Output
+Printing all the values of an Array ==> BMW
+Printing all the values of an Array ==> AUDI
+Printing all the values of an Array ==> TOYOTA
+Printing all the values of an Array ==> SUZUKI
+Printing all the values of an Array ==> HONDA
